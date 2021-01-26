@@ -27,6 +27,8 @@ object ServiceLoaderUtil {
     if (!Objects.equals(fmt.toString(), ParquetFileFormatIndicator.OVERWRITTEN_INDICATOR)) {
       throw new ClassNotFoundException("ParquetFileFormat is not overwritten by Arrow. Consider " +
         "reordering jar dependencies to let the overwritten version to be recognized by JVM")
+    } else {
+      System.out.print("ParquetFileFormat is Overwritten")
     }
   }
 }

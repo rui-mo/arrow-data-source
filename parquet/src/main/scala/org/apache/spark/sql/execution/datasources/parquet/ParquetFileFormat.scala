@@ -63,6 +63,8 @@ class ParquetFileFormat
     with Logging
     with Serializable {
 
+  logInfo(s"enter ParquetFileFormat")
+
   override def shortName(): String = "parquet"
 
   override def toString: String = ParquetFileFormatIndicator.OVERWRITTEN_INDICATOR
